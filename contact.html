@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Lei: Info</title>
+        <style>
+
+* {
+  box-sizing: border-box;
+}
+
+          /* Hide scrollbar for Chrome, Safari and Opera */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+            body {
+                background-color: black;
+                font-family: 'Roboto Condensed', sans-serif;
+            }
+
+
+            #navbar {
+                overflow: hidden;
+                background-color: black;
+                padding: 50px 10px;
+                transition: 0.4s;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 14%;
+                z-index: 99;
+            }
+
+            #navbar a {
+            color: #f5e9e2;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 12px; 
+            line-height: 25px;
+            border-radius: 4px;
+}
+
+#navbar #logo { 
+  color:maroon;
+  font-family: arial;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.4s;
+  margin-left: 5%;
+}
+
+#navbar a:hover {
+  color: maroon;
+  letter-spacing: 5px;
+  font-size: 20px;
+  transition: .20s ease;
+}
+
+#navbar-right {
+  float: right;
+  margin-right: 34.2%;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}  
+
+
+
+            /* the content */
+
+            .the-content {
+            padding: 10px;
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            }
+
+
+            .fa {
+              border-radius: 25%;
+              justify-content: center;
+              align-items: center;
+  padding: 20px;
+  font-size: 30px;
+  width: 10%;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 2px;
+}
+  
+            .fa:hover {
+    opacity: 0.7;
+    transition: 0.10s ease;
+}
+
+            .fa-facebook {
+  background: maroon;
+  color: white;
+}
+
+.fa-instagram {
+  background: maroon;
+  color: white;
+}
+
+.fa-pinterest {
+  background: maroon;
+  color: white;
+}
+
+/* All the snapping stuff */
+.scroll-container {
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: center;
+}
+
+/* Other styles */
+section {
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 2%;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: white;
+    font-family:'Roboto Condensed', sans-serif;
+    font-size: 70px;
+}
+
+table {
+  width: 70%;
+  table-layout: fixed;
+  width: 300px;
+}
+
+table th {
+  margin-left: 0;
+  font-size: 20px;
+  color: maroon;
+}
+
+table td {
+  font-size: 20px;
+  text-align: left;
+}
+
+h1 {
+  margin-bottom: 2%;
+}
+            
+
+        </style>
+    </head>
+    <body>
+        <div id="navbar">
+            <a href="index.html" id="logo">lei:sure</a>
+             <div id="navbar-right">
+               <a href= "./index.html">index</a>
+               <a href= "./details.html">details</a>
+               <a href= "./samples.html">portfolio</a>
+               <a href= "./contact.html">contact</a>
+             </div> 
+           </div>
+
+           <main class="scroll-container">
+
+            <section>
+        <div class="the-content">
+            <h1><span style="color: maroon;">Contact</span> me at the following.</h1>
+            <hr>
+            <table>
+              <tr>
+                <th>TEL</th>
+                <td>+6019 864 2643</td>
+              </tr>
+              <tr>
+                <th>GMAIL</th>
+                <td>amelia6104@gmail.com</td>
+              </tr>
+            </table>
+            <a href="https://www.facebook.com/blingerific/" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/sixfoul/" class="fa fa-instagram"></a>
+            <a href="https://www.pinterest.com/succuwent/" class="fa fa-pinterest"></a>
+          </section>
+        </div>
+</main>
+
+    </body>
+</html>

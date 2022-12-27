@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lei: Info</title>
+        <style>
+
+            body {
+                width: 100%;
+                background-color: black;
+                font-family: 'Roboto Condensed', sans-serif;
+                overflow-x: hidden;
+            }
+
+            #navbar {
+                width: 80%;
+                overflow: hidden;
+                background-color: black;
+                padding: 50px 10px;
+                transition: 0.4s;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 14%;
+                z-index: 99;
+            }
+
+            #navbar a {
+            color: #f5e9e2;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 12px; 
+            line-height: 25px;
+            border-radius: 4px;
+}
+
+#navbar #logo { 
+    width: 100%;
+  color:maroon;
+  font-family: arial;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.4s;
+  margin-left: 5%;
+}
+
+#navbar a:hover {
+  color: maroon;
+  letter-spacing: 5px;
+  font-size: 20px;
+  transition: .20s ease;
+}
+
+#navbar-right {
+  float: right;
+  margin-right: 34.2%;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}    
+
+.about-me {
+    padding-top: 15%;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20%;
+}
+
+.about-me h1 {
+    color: white;
+    font-size: 80px;
+}
+
+.info {
+    margin-top: 10%;
+    margin-bottom: 20%;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    color: white;
+}
+
+.info p {
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 2px;
+}
+
+.table1 {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.table2 {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+.past {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+.past h2 {
+    color: white;
+    font-size: 70px;
+    text-align: center;
+}
+
+.past p {
+    color: white;
+    text-align: justify;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.education {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+.education h2 {
+    color: white;
+    font-size: 70px;
+    text-align: center;
+}
+
+.education dl, dt, dd {
+    margin-bottom: 2%;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.education img {
+    height: 170px;
+    float: left;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+            /* details styling */
+
+            #btn {
+                padding: 10px 15px;
+                padding-left: 0;
+                color: white;
+                background-color: transparent;
+                border-style: none;
+                font-family: 'Roboto Condensed', sans-serif;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                outline: none;
+        }
+
+        #btn:hover {
+            letter-spacing: 5px;
+            transition: 0.20s ease;
+        }
+
+        #info-table table {
+        width: 80%;
+        table-layout: fixed;
+        width: 500px;
+        }
+
+        #info-table table, th, td {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: white;
+            border: none;
+            border-collapse: collapse;
+            padding-top: 0;
+            padding: 10px;           
+        }
+
+        #info-table td {
+            width: 800px;
+        }
+
+        #info-table th {
+            padding-left: 0;
+            width: 200px;
+            color: maroon;
+            margin: 0;
+            text-align: left;
+        }
+
+        #info-table th:hover {
+            font-size: 50px;
+            transition: .20s ease;
+        }
+
+        #interests-table table {
+        width: 100%;
+        table-layout: fixed;
+        width: 500px;
+        }
+
+        #interests-table table, th {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 30px;
+            color: white;
+            border: none;
+            border-collapse: collapse;
+            padding: 20px;
+            width: 200px;        
+        }
+
+        #interests-table th:hover {
+            font-size: 50px;
+            letter-spacing: 7px;
+            transition: .20s ease;
+        }
+
+        #interests-table td {
+            font-size: 50px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+  
+
+.info img {
+    max-width: 100%;
+    border-radius: 50%;
+    height: 150px;
+    margin-right: 20px;
+    float: left;
+}
+
+.end-link {
+    width: 60%;
+    margin-left: auto;
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 10%;    
+}
+
+.end-link a {
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.end-link a:hover {
+    color: maroon;
+    transition: .20s ease;
+}
+            
+
+        </style>
+    </head>
+    <body>
+        <div id="navbar">
+            <a href="index.html" id="logo">lei:sure</a>
+             <div id="navbar-right">
+               <a href= "./index.html">index</a>
+               <a href= "./details.html">details</a>
+               <a href= "./samples.html">portfolio</a>
+               <a href= "./contact.html">contact</a>
+             </div> 
+           </div>
+
+        <div class="about-me">
+        <h1 id="change-it"><span style="color:maroon">W</span>ho are you, exactly?</h1>
+        <button type="button" id="btn" onclick="changeWording()">CLICK HERE TO KNOW MY NAME.</button>
+        </div>
+
+        <div class="info">
+
+        <img src="https://i.postimg.cc/MGkJ4kgk/IMG-3265.png">
+        <p>I am a twenty year old student from Miri, Sarawak, Malaysia with an interest to do good in life. I am currently studying at UiTM Kota Samarahan 2
+            as a Computer and Mathematical Sciences major. I enjoy challenging myself and going beyond. Lei:sure is a play on words using my nickname Lei and the word
+        leisure, which means: an opportunity afforded by free time to do something.</p> 
+    </div>
+
+    <div class="table2">
+        <!-- table -->
+        <table id="info-table">
+            <tr>
+                <th colspan="2" style="letter-spacing: 5px; font-size: 60px; color: white;"><center><span style="color: maroon">S</span>KILLS</center></th>
+            </tr>
+            <tr>
+                <th>Languages</th>
+                <td>English, Malay, Iban, Basic Mandarin</td>
+            </tr>
+            <tr>
+                <th>Programming Languages</th>
+                <td>C++, Java, PHP</td>
+            </tr>
+            <tr>
+                <th>Web Development</th>
+                <td>HTML, CSS</td>
+            </tr>
+            <tr>
+                <th>Other Proficiencies</th>
+                <td>Sony Vegas Pro 15.0, Adobe Photoshop, Adobe Premiere Pro CC 2019</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="education">
+        <h2><span style="color:maroon">E</span>ducation</h2>
+        <img src="https://i.postimg.cc/VNw3qk1H/education-icon.png">
+<dl>
+    <dt><b>SMK St. Joseph, Miri (2013-2017)</b></dt>
+    <dd>Secretary - Prefect Headboard (2016 - 2017)</dd>
+    <dd>Best Achievment in English Subject Award (2013-2017)</dd>
+    <br>
+    <dt><b>UiTM Kampus Samarahan, 2, Sarawak (2018 - Present)</b></dt>
+
+</dl>
+    </ul>
+    </div>
+
+    <div class="past">
+        <h2><span style="color:maroon">P</span>ast Experiences</h2>
+        <p>I have finished a two-month internship as of late at Sarawak State Library's Miri Branch, also known as Pustaka Miri. I started during the 28th of August and completed it by 3rd of October.
+            <br><br>Industrial training, also known as practical training, is a compulsory course for all students taking Diploma of Computer Science and Mathematics. Students must complete one session of the approved practical prior to graduation with Diploma of Computer Science and Mathematics in MARA University of Technology Malaysia. <br><br> The standard industrial training lasts for an eight-week period, where students will intern at a company of their choosing that is related to the course they are studying in. They will be monitored by a professional staff of their chosen company as a supervisor. 
+        </p>
+    </div>
+
+    <div class="table1">
+        <table id="interests-table">
+            <tr><td colspan="5"><center><b><span style="color: maroon">P</span>ersonal Interests</b></center></td></tr>
+            <tr>
+                <th>Writing</th>
+                <th><span style="color: maroon">Embroidering</span></th>
+                <th>Listening to Music</th>
+                <th><span style="color: maroon">Gaming</span></th>
+                <th>Drawing</th>
+            </tr>
+        </table>
+</div>
+
+<div class="end-link">
+    <a href="./samples.html">>> proceed to samples of work.</a> 
+</div>
+
+    <script>
+        function changeWording() {
+            var message = "Amelia Natasha Dora.";
+            var message2 = "Scroll down for more.";
+            document.getElementById("change-it").innerHTML = message;
+            document.getElementById("btn").innerHTML = message2;
+        }
+    </script>
+
+    </body>
+</html>
